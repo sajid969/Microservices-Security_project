@@ -1,0 +1,10 @@
+Hello {USERNAME},<br/>
+<br/>
+This is from TCS, your registration is almost completed<br/>
+<br/>
+Temporary Password: {PWD} <br/>
+<br/>
+<a href="{URL}">Click here to Activate Your Account</a><br/>
+<br/>
+Regards<br/>
+Admin Team 

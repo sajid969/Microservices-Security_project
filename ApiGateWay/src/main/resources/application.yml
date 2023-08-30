@@ -1,0 +1,52 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+server:
+  port: 3333
+  
+spring:
+  application:
+    name: API-GATEWAY
+    
+ 
+    
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: one
+        uri: lb://INSURANCEPLANAPPLICATION
+        predicates:
+        - Path=/insurance/**
+        filters:
+            - name: MyAuthenticationFilter
+      - id: two
+        uri: lb://CREATEAPPLICATION
+        predicates:
+        - Path=/createapp/**
+        filters:
+            - name: MyAuthenticationFilter
+       
+      - id: three
+        uri: lb://DATACOLLECTIONS
+        predicates:
+        - Path=/datacollect/**
+        filters:
+            - name: MyAuthenticationFilter
+        
+      - id: four
+        uri: lb://ELIGIBILTYDETAILS
+        predicates:
+        - Path=/eligibility/**
+        filters:
+            - name: MyAuthenticationFilter
+      
+
+ 

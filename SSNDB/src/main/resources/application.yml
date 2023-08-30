@@ -1,0 +1,19 @@
+server:
+  port: 8181
+spring:
+  datasource:
+    password: Password@sql
+    url: jdbc:mysql://localhost:3306/insurance
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    user:
+      name: user
+      password: password
+      roles: USER
+  main:
+    allow-circular-references: true
+

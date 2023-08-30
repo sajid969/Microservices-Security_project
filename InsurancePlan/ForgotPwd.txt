@@ -1,0 +1,8 @@
+Hello {USERNAME},
+
+This is from TCS, please don't share your OTP.
+
+One Time Password (OTP): {OTP}
+
+Regards,
+Admin Team.
